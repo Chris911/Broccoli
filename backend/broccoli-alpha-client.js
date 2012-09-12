@@ -31,6 +31,8 @@ function loadjQuery(url, callback) {
 }
 
 // Load the script if needed, make jquery ajax request using callback
+// - Be up-to-date with latest version from Google :
+// - https://developers.google.com/speed/libraries/devguide#jquery
 loadjQuery("https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js", function ajax(){
 	$(window).load(function() {
 		$.ajax({
