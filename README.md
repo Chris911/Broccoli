@@ -1,7 +1,7 @@
 Broccoli
 ========
 
-Web Analysis for Humans
+Web Analytics for Humans
 
 Dependencies
 ------------
@@ -10,7 +10,9 @@ Dependencies
 * [MongoDb](http://www.mongodb.org/) - Database Storage
 
 ### Backend (Server)
-
+* [Node.js](http://nodejs.org/) - Application Server
+* [MongoDb](http://www.mongodb.org/) - Database Storage
+* [jQuery](http://jquery.org/) - Client-server communication
 
 ### Frontend (Dashboard)
 * [Express.js](http://expressjs.com/) - Node.js Web Framework
