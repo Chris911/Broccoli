@@ -1,7 +1,7 @@
 var http = require('http');
 var url = require('url');
-var Db = require('/home/pag/public_html/node_modules/mongodb').Db;
-var Server = require('/home/pag/public_html/node_modules/mongodb').Server;
+var Db = require('mongodb').Db;
+var Server = require('mongodb').Server;
 
 var $count = 0;
 
