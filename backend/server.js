@@ -1,6 +1,7 @@
 var http = require('http');
 var url = require('url');
 var factory = require('./modules/factory');
+var backstore = require('./modules/backstore');
 
 // Env variable declaration
 var serverVar = {
@@ -20,9 +21,13 @@ var server = http.createServer(function (request, response) {
         "valid":"false"
     };
     
-    reqObj = factory.checkValidity(reqObj);
-    console.log("Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
-    
+    factory.checkValidity(reqObj, function(request){
+        console.log("Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
+        backstore.insert(request, function(){
+            console.log("Server : Stored in backstore");
+        });
+    });
+      
     response.writeHead(200, {
         "Content-Type": "text/plain",
 		"Access-Control-Allow-Origin": "*"

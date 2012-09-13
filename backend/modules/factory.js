@@ -21,33 +21,33 @@ var init = function(request, callback){
     callback(request);
 };
 
-var timeValidity = function (request){
+var timeValidity = function (request, callback){
     db.open(function(err,db){
         db.collection('visits', function(err,collection){
             collection.find().sort([['_id', -1]]).nextObject(function(err, item) {
                 assert.equal(null, err);
                 console.log("FACTORY CHECK : %s with %s", request.urlRequest, item.urlRequest);
-                if(item.url-request == request.urlRequest && item.url-request != null)
+                if(item.urlRequest == request.urlRequest)
                     console.log("Factory: the last request was for the same page, request not valid for %s", request.urlRequest);
                 else
                     console.log("Factory: request is valid.");
                     
-                    request.valid = "true";
+                request.valid = "true";
                     
                 db.close();
+                callback(request);
             });
         });
     });
 };
 
-exports.checkValidity = function (request){
+exports.checkValidity = function (request, callback){
     console.log("Factory: request handling");
     
     init(request, function(request){
-        timeValidity(request);
+            timeValidity(request, function(request){
+            callback(request);
+        });
     });
-
-    console.log("Factory CHECK2 : %s", request.valid);
-    return request;
 };
 
