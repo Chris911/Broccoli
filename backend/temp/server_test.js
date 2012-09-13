@@ -28,7 +28,7 @@ var server = http.createServer(function (request, response) {
             doc={
                 "origin"  :     request.headers.origin,
                 "ip"  :         ip_address,
-                "url-request" : pathname
+                "urlRequest" : pathname
             };
 	
 	    collection.insert(doc, function(){
@@ -49,7 +49,7 @@ var server = http.createServer(function (request, response) {
     $count++;
 });
 
-server.listen(8080);
+server.listen(8081);
 
 console.log("Server running...");
 

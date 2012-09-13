@@ -1,4 +1,5 @@
 var http = require('http');
+var url = require('url');
 var factory = require('./modules/factory');
 
 // Env variable declaration
@@ -13,12 +14,14 @@ var server = http.createServer(function (request, response) {
     
     var reqObj = {
         "name":"RequestName",
-        "ip":request.connection.remoteAddress,
-        "domain":request.connection.serverName,
+        "clientIp":request.connection.remoteAddress,
+        "domain":request.headers.origin,
+        "urlRequest":url.parse(request.url).query,
         "valid":"false"
     };
-    reqObj = factory.isValid(reqObj);
-    console.log("Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.ip);
+    
+    reqObj = factory.checkValidity(reqObj);
+    console.log("Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
     
     response.writeHead(200, {
         "Content-Type": "text/plain",
