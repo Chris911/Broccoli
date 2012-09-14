@@ -3,14 +3,14 @@ var CT = require('./modules/country-list');
 var AM = require('./modules/account-manager');
 var EM = require('./modules/email-dispatcher');
 
-module.exports = function(app) {
+module.exports = function(dashboard) {
 
 // main login page //
 
-	app.get('/', function(req, res){
+	dashboard.get('/', function(req, res){
 	// check if the user's credentials are saved in a cookie //
 		if (req.cookies.user == undefined || req.cookies.pass == undefined){
-			res.render('login', { locals: { title: 'Hello - Please Login To Your Account' }});
+			res.render('login', { title: 'Hello - Please Login To Your Account' });
 		}	else{
 	// attempt automatic login //
 			AM.autoLogin(req.cookies.user, req.cookies.pass, function(o){
@@ -18,13 +18,13 @@ module.exports = function(app) {
 				    req.session.user = o;
 					res.redirect('/home');
 				}	else{
-					res.render('login', { locals: { title: 'Hello - Please Login To Your Account' }});
+					res.render('login', { title: 'Hello - Please Login To Your Account'});
 				}
-			});
+		 	});
 		}
 	});
 	
-	app.post('/', function(req, res){
+	dashboard.post('/', function(req, res){
 		AM.manualLogin(req.param('user'), req.param('pass'), function(e, o){
 			if (!o){
 				res.send(e, 400);
@@ -41,22 +41,20 @@ module.exports = function(app) {
 	
 // logged-in user homepage //
 	
-	app.get('/home', function(req, res) {
+	dashboard.get('/home', function(req, res) {
 	    if (req.session.user == null){
 	// if user is not logged-in redirect back to login page //
 	        res.redirect('/');
 	    }   else{
 			res.render('home', {
-				locals: {
-					title : 'Control Panel',
-					countries : CT,
-					udata : req.session.user
-				}
+				title : 'Control Panel',
+				countries : CT,
+				udata : req.session.user
 			});
 	    }
 	});
 	
-	app.post('/home', function(req, res){
+	dashboard.post('/home', function(req, res){
 		if (req.param('user') != undefined) {
 			AM.update({
 				user 		: req.param('user'),
@@ -86,11 +84,11 @@ module.exports = function(app) {
 	
 // creating new accounts //
 	
-	app.get('/signup', function(req, res) {
-		res.render('signup', {  locals: { title: 'Signup', countries : CT } });
+	dashboard.get('/signup', function(req, res) {
+		res.render('signup', { title: 'Signup', countries : CT });
 	});
 	
-	app.post('/signup', function(req, res){
+	dashboard.post('/signup', function(req, res){
 		AM.signup({
 			name 	: req.param('name'),
 			email 	: req.param('email'),
@@ -108,7 +106,7 @@ module.exports = function(app) {
 
 // password reset //
 
-	app.post('/lost-password', function(req, res){
+	dashboard.post('/lost-password', function(req, res){
 	// look up the user's account via their email //
 		AM.getEmail(req.param('email'), function(o){
 			if (o){
@@ -129,7 +127,7 @@ module.exports = function(app) {
 		});
 	});
 
-	app.get('/reset-password', function(req, res) {
+	dashboard.get('/reset-password', function(req, res) {
 		var email = req.query["e"];
 		var passH = req.query["p"];
 		AM.validateLink(email, passH, function(e){
@@ -143,7 +141,7 @@ module.exports = function(app) {
 		})
 	});
 	
-	app.post('/reset-password', function(req, res) {
+	dashboard.post('/reset-password', function(req, res) {
 		var nPass = req.param('pass');
 	// retrieve the user's email from the session to lookup their account and reset password //
 		var email = req.session.reset.email;
@@ -160,13 +158,13 @@ module.exports = function(app) {
 	
 // view & delete accounts //
 	
-	app.get('/print', function(req, res) {
+	dashboard.get('/print', function(req, res) {
 		AM.getAllRecords( function(e, accounts){
-			res.render('print', { locals: { title : 'Account List', accts : accounts } });
+			res.render('print', { title : 'Account List', accts : accounts });
 		})
 	});
 	
-	app.post('/delete', function(req, res){
+	dashboard.post('/delete', function(req, res){
 		AM.delete(req.body.id, function(e, obj){
 			if (!e){
 				res.clearCookie('user');
@@ -178,11 +176,11 @@ module.exports = function(app) {
 	    });
 	});
 	
-	app.get('/reset', function(req, res) {
+	dashboard.get('/reset', function(req, res) {
 		AM.delAllRecords( );
 		res.redirect('/print');
 	});
 	
-	app.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
+	dashboard.get('*', function(req, res) { res.render('404', { title: 'Page Not Found'}); });
 
 };

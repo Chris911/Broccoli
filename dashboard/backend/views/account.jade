@@ -21,7 +21,7 @@ input(type='hidden', value= user._id)#userId
 			#clist-cg.control-group
 				label.control-label(for='country-list') Location
 				.controls
-					select#country-list(name='country')
+					select#country-list(name='countries')
 						each item in countries
 							option(selected=item.name == user.country)= item.name
 			hr

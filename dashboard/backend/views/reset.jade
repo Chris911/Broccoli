@@ -1,8 +1,10 @@
+extends layout
 
-include modals/reset-password
+block content
+	include modals/reset-password
 
-script(src='/3rdParty/jQuery/jquery-1.8.1.min.js')
-script(src='/3rdParty/jQuery/jquery.form.js')
-script(src='/3rdParty/bootstrap/js/bootstrap.min.js')
-script(src='/js/form-validators/resetValidator.js')
-script(src='/js/views/reset.js')
+	script(src='/3rdParty/jQuery/jquery-1.8.1.min.js')
+	script(src='/3rdParty/jQuery/jquery.form.js')
+	script(src='/3rdParty/bootstrap/js/bootstrap.min.js')
+	script(src='/js/form-validators/resetValidator.js')
+	script(src='/js/views/reset.js')

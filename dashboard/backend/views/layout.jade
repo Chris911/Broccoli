@@ -1,7 +1,57 @@
-!!!
+doctype 5
 html
 	head
-		title= title
-		link(rel='stylesheet', href='/3rdParty/bootstrap.min.css')
+		title!= title
+		link(rel='stylesheet', href='/3rdParty/bootstrap/css/bootstrap.css')
 		link(rel='stylesheet', href='/css/style.css')
-		
+
+	body
+		//LOGO
+		#top-logo-container
+			img.logo(src='/img/logo.png')
+
+		#top-graph
+			img(src='/img/graph.png')
+
+		#top-right
+			ul(style='list-style: none')
+				li 
+					a(href='http://Facebook.com')
+						img(src='/img/Facebook.png')
+				li
+					a(href='http://twiter.com')
+						img(src='/img/Twitter.png')
+				li
+					a(href='http://reddit.com')
+						img(src='/img/Reddit.png')
+
+
+		// NAVIGATION BAR
+		div.navbar
+			div.navbar-inner
+				div.container
+					a.brand(href='#') Broccoli
+					ul.nav
+						li.divider-vertical 
+							a(href='#1') Tour
+						li.divider-vertical 
+							a(href='#2') Pricing 
+						li.divider-vertical 
+							a(href='#3') Documentation
+					ul.nav.pull-right
+						li.dropdown
+							a.dropdown-toggle(href='#', data-toggle="dropdown") API
+								b.caret
+							ul.dropdown-menu(role='menu', aria-labelledby='dLabel')
+								li
+									a(href='#api1') API1
+								li
+									a(href='#api1') API2
+								li
+									a(href='#api1') API3
+					ul.nav.pull-right
+						form.navbar-search
+							input.search-query(type='text', placeHolder='Search')
+					
+
+		block content
