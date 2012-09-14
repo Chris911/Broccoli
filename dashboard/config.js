@@ -11,7 +11,6 @@ module.exports = function(dashboard, exp) {
 		dashboard.use(exp.cookieParser());
 		dashboard.use(exp.session({ secret: 'Abroccoli-session-masterA' }));
 		dashboard.use(exp.methodOverride());
-		dashboard.use(require('stylus').middleware({ src: dashboard.root + '/dashboard/public' }));
 		dashboard.use(exp.static(dashboard.root + '/dashboard/backend'));
 		dashboard.use(exp.static(dashboard.root + '/dashboard/public'));
 	});
