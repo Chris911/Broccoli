@@ -18,9 +18,12 @@ var server = http.createServer(function (request, response) {
         "clientIp":request.connection.remoteAddress,
         "domain":request.headers.origin,
         "urlRequest":url.parse(request.url).query,
-        "valid":"false"
+        "userAgent":request.headers.userAgent,
+        "valid":"false",
+        "timestamp":new Date()
     };
     
+
     factory.checkValidity(reqObj, function(request){
         console.log("Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
         backstore.insert(request, function(){

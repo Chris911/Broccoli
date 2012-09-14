@@ -24,16 +24,18 @@ var init = function(request, callback){
 var timeValidity = function (request, callback){
     db.open(function(err,db){
         db.collection('visits', function(err,collection){
-            collection.find().sort([['_id', -1]]).nextObject(function(err, item) {
+            collection.find({"ip":request.ip}).sort([['_id', -1]]).nextObject(function(err, item) {
                 assert.equal(null, err);
-                console.log("FACTORY CHECK : %s with %s", request.urlRequest, item.urlRequest);
-                if(item.urlRequest == request.urlRequest)
-                    console.log("Factory: the last request was for the same page, request not valid for %s", request.urlRequest);
-                else
-                    console.log("Factory: request is valid.");
-                    
-                request.valid = "true";
-                    
+                if(item != null){
+                    console.log("FACTORY CHECK : %s with %s", request.urlRequest, item.urlRequest);
+                    if(item.urlRequest == request.urlRequest)
+                        console.log("Factory: the last request was for the same page, request not valid for %s", request.urlRequest);
+                    else {
+                        console.log("Factory: request is valid.");
+                         request.valid = "true";
+                    }         
+                }
+                
                 db.close();
                 callback(request);
             });
