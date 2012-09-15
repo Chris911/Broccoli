@@ -24,6 +24,12 @@ var insert = function(request,callback){
 
     db.open(function() {
         db.collection('visits', function(err, collection){
+            if(err) {
+                //Handle error
+                console.log("Exception occured (Backstore.js/insert): \n");
+                console.log("Request data: " + request + "\n")
+                return;
+            }
             collection.insert(request, function(){
                 console.log("Data inserted in DB");
             });

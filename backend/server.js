@@ -1,7 +1,9 @@
 var http = require('http');
 var url = require('url');
+var moment = require('moment');
 var factory = require('./modules/factory');
 var backstore = require('./modules/backstore');
+var uaParser = require('./modules/ua-parser');
 
 // Env variable declaration
 var serverVar = {
@@ -13,14 +15,18 @@ var serverVar = {
 var server = http.createServer(function (request, response) {
     console.log('Server: request handling... -------------');
     
+    var parsedUA = uaParser.parse(request.headers['user-agent']);
+
     var reqObj = {
         "name":"RequestName",
+        "valid":"false",
         "clientIp":request.connection.remoteAddress,
         "domain":request.headers.origin,
         "urlRequest":url.parse(request.url).query,
-        "userAgent":request.headers.userAgent,
-        "valid":"false",
-        "timestamp":new Date()
+        "userAgent":request.headers['user-agent'],
+        "OS":parsedUA.platform.name,
+        "browser":parsedUA.browser.name + " " + parsedUA.browser.version,
+        "timestamp":moment().format()
     };
     
 
