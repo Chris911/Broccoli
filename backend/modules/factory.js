@@ -17,7 +17,7 @@ var init = function(request, callback){
     
     db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {}), {});
     
-    console.log("Factory: init complete %s, %d", dbServerVar.name, dbServerVar.port);
+    console.log("## Factory: init complete %s, %d", dbServerVar.name, dbServerVar.port);
     callback(request);
 };
 
@@ -27,11 +27,11 @@ var timeValidity = function (request, callback){
             collection.find({"ip":request.ip}).sort([['_id', -1]]).nextObject(function(err, item) {
                 assert.equal(null, err);
                 if(item != null){
-                    console.log("FACTORY CHECK : %s with %s", request.urlRequest, item.urlRequest);
+                    console.log("## FACTORY CHECK : %s with %s", request.urlRequest, item.urlRequest);
                     if(item.urlRequest == request.urlRequest)
-                        console.log("Factory: the last request was for the same page, request not valid for %s", request.urlRequest);
+                        console.log("## Factory: the last request was for the same page, request not valid for %s", request.urlRequest);
                     else {
-                        console.log("Factory: request is valid.");
+                        console.log("## Factory: request is valid.");
                          request.valid = "true";
                     }         
                 }
@@ -44,7 +44,7 @@ var timeValidity = function (request, callback){
 };
 
 exports.checkValidity = function (request, callback){
-    console.log("Factory: request handling");
+    console.log("## Factory: request handling");
     
     init(request, function(request){
             timeValidity(request, function(request){

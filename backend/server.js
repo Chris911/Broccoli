@@ -13,7 +13,8 @@ var serverVar = {
 
 // Webserver & Callback
 var server = http.createServer(function (request, response) {
-    console.log('Server: request handling... -------------');
+    console.log('---------------------------------------');
+    console.log('# Server: request handling...');
     
     var parsedUA = uaParser.parse(request.headers['user-agent']);
 
@@ -28,12 +29,12 @@ var server = http.createServer(function (request, response) {
         "browser":parsedUA.browser.name + " " + parsedUA.browser.version,
         "timestamp":moment().format()
     };
-    
+    console.log(reqObj);
 
     factory.checkValidity(reqObj, function(request){
-        console.log("Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
+        console.log("# Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
         backstore.insert(request, function(){
-            console.log("Server : Stored in backstore");
+            console.log("# Server : Stored in backstore");
         });
     });
       
@@ -43,7 +44,7 @@ var server = http.createServer(function (request, response) {
 	});
     response.end("Broccoli pre-alpha, " + serverVar.port);
     
-    console.log('Server: end of handling...');
+    console.log('# Server: end of handling...');
 }).listen(serverVar.port);
 
-console.log("Server running %s:%d", serverVar.name, serverVar.port);
+console.log("# Server running %s:%d", serverVar.name, serverVar.port);

@@ -16,7 +16,7 @@ var init = function(request, callback){
     
     db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {}), {});
     
-    console.log("Factory: init complete %s, %d", dbServerVar.name, dbServerVar.port);
+    console.log("## Backstore: init complete %s, %d", dbServerVar.name, dbServerVar.port);
     callback(request);
 };
 
@@ -31,7 +31,7 @@ var insert = function(request,callback){
                 return;
             }
             collection.insert(request, function(){
-                console.log("Data inserted in DB");
+                console.log("## Backstore: Data inserted in DB");
             });
         });
     });
@@ -39,7 +39,7 @@ var insert = function(request,callback){
 };
 
 exports.insert = function(request,callback){
-    console.log("Backstore: insert");
+    console.log("## Backstore: insert");
     
     init(request, function(request){
             insert(request, function(request){
