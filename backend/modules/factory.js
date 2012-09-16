@@ -46,6 +46,7 @@ var timeValidity = function (request, callback){
 exports.checkValidity = function (request, callback){
     console.log("## Factory: request handling");
     
+    // After init, call validity checks
     init(request, function(request){
             timeValidity(request, function(request){
             callback(request);

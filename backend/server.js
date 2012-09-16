@@ -26,17 +26,21 @@ var server = http.createServer(function (request, response) {
         "urlRequest":url.parse(request.url).query,
         "userAgent":request.headers['user-agent'],
         "OS":parsedUA.platform.name,
-        "browser":parsedUA.browser.name + " " + parsedUA.browser.version,
+        "browser":parsedUA.browser.name,
+        "browserVer":parsedUA.browser.version,
         "timestamp":moment().format()
     };
     console.log(reqObj);
 
-    factory.checkValidity(reqObj, function(request){
-        console.log("# Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
-        backstore.insert(request, function(){
-            console.log("# Server : Stored in backstore");
+    // If the domain of the request is empty, no visit will be logged (unknown site)
+    if(reqObj.domain != null){
+        factory.checkValidity(reqObj, function(request){
+            console.log("# Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
+            backstore.insert(request, function(){
+                console.log("# Server : Stored in backstore");
+            });
         });
-    });
+    }   
       
     response.writeHead(200, {
         "Content-Type": "text/plain",
