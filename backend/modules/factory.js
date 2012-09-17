@@ -42,8 +42,8 @@ var timeValidity = function (request, callback){
                         console.log("## Factory: request is valid.");
                          request.valid = "true";
                     } 
-                    now = moment.format();
-                    console.log("Time, %s", moment(item.timestamp).from(a).asSeconds());       
+                    //now = moment.format();
+                    //console.log("Time, %s", moment(item.timestamp).from(a).asSeconds());       
                 }
                 
                 db.close();
