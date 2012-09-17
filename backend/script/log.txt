@@ -1,0 +1,1629 @@
+# Server running broccoli-server:8081
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/is-something-wrong-with-this/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/is-something-wrong-with-this/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:46:44-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/is-something-wrong-with-this/ with /random/how-to-hex-teh-facebookz/?topicseen
+## Factory: request is valid.
+Time, 14 minutes
+# Server: prop.valid: true, IP :/found-it-on-the-webs/is-something-wrong-with-this/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'accept-encoding': 'gzip',
+  referer: 'http://www.evilzone.org/',
+  'accept-language': 'en-US',
+  'user-agent': 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.0.22.79_10013310) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true',
+  origin: 'http://www.evilzone.org',
+  connection: 'keep-alive',
+  accept: '*/*',
+  'accept-charset': 'utf-8, iso-8859-1, utf-16, *;q=0.7' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '99.103.125.137',
+  domain: 'http://www.evilzone.org',
+  urlRequest: '/',
+  userAgent: 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_3; en-us; Silk/1.0.22.79_10013310) AppleWebKit/533.16 (KHTML, like Gecko) Version/5.0 Safari/533.16 Silk-Accelerated=true',
+  OS: 'mac',
+  browser: 'safari',
+  browserVer: '5.0',
+  timestamp: '2012-09-16T23:46:50-04:00' }
+## Factory: request handling
+## Factory: init complete www-evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : / with /
+## Factory: the last request was for the same page, request not valid for /
+Time, 2 hours
+# Server: prop.valid: false, IP :/
+## Backstore: insert
+## Backstore: init complete www-evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/useful-books/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/useful-books/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:47:00-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/useful-books/ with /found-it-on-the-webs/is-something-wrong-with-this/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/useful-books/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/index.php',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '68.114.28.110',
+  domain: 'http://evilzone.org',
+  urlRequest: '/index.php',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:47:01-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /index.php with /found-it-on-the-webs/useful-books/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/index.php
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/c-c/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '68.114.28.110',
+  domain: 'http://evilzone.org',
+  urlRequest: '/c-c/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:47:07-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /c-c/ with /index.php
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/c-c/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://www.evilzone.org/',
+  origin: 'http://www.evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '117.197.140.211',
+  domain: 'http://www.evilzone.org',
+  urlRequest: '/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:47:26-04:00' }
+## Factory: request handling
+## Factory: init complete www-evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : / with /
+## Factory: the last request was for the same page, request not valid for /
+Time, a few seconds
+# Server: prop.valid: false, IP :/
+## Backstore: insert
+## Backstore: init complete www-evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '49.244.126.4',
+  domain: 'http://evilzone.org',
+  urlRequest: '/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:47:31-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : / with /c-c/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/general-discussion/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '49.244.126.4',
+  domain: 'http://evilzone.org',
+  urlRequest: '/general-discussion/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:47:37-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /general-discussion/ with /
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/general-discussion/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/free-online-courses/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/free-online-courses/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:47:57-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/free-online-courses/ with /general-discussion/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/free-online-courses/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/security-tools/dns-rebind-(router-hacking)/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/security-tools/dns-rebind-(router-hacking)/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:48:03-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /security-tools/dns-rebind-(router-hacking)/ with /found-it-on-the-webs/free-online-courses/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/security-tools/dns-rebind-(router-hacking)/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/members-introduction/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '49.244.126.4',
+  domain: 'http://evilzone.org',
+  urlRequest: '/members-introduction/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:48:33-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /members-introduction/ with /security-tools/dns-rebind-(router-hacking)/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/members-introduction/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/members-introduction/novice-ready-to-learn/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '49.244.126.4',
+  domain: 'http://evilzone.org',
+  urlRequest: '/members-introduction/novice-ready-to-learn/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:48:42-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /members-introduction/novice-ready-to-learn/ with /members-introduction/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/members-introduction/novice-ready-to-learn/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/50/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/50/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:48:45-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/50/ with /members-introduction/novice-ready-to-learn/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/50/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/how-to-create-a-free-minecraft-acc/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/how-to-create-a-free-minecraft-acc/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:49:03-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/how-to-create-a-free-minecraft-acc/ with /found-it-on-the-webs/50/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/how-to-create-a-free-minecraft-acc/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/hacking-and-security/?PHPSESSID=k9659bujhuc4csq3bltqumssc4',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '117.197.140.211',
+  domain: 'http://evilzone.org',
+  urlRequest: '/hacking-and-security/?PHPSESSID=k9659bujhuc4csq3bltqumssc4',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:49:12-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /hacking-and-security/?PHPSESSID=k9659bujhuc4csq3bltqumssc4 with /found-it-on-the-webs/how-to-create-a-free-minecraft-acc/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/hacking-and-security/?PHPSESSID=k9659bujhuc4csq3bltqumssc4
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/75/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/75/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:49:21-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/75/ with /hacking-and-security/?PHPSESSID=k9659bujhuc4csq3bltqumssc4
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/75/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/ebooks/(pdf)-a-game-of-thrones-(books-1-5)/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3',
+  dnt: '1' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '68.33.215.108',
+  domain: 'http://evilzone.org',
+  urlRequest: '/ebooks/(pdf)-a-game-of-thrones-(books-1-5)/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:49:30-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /ebooks/(pdf)-a-game-of-thrones-(books-1-5)/ with /found-it-on-the-webs/75/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/ebooks/(pdf)-a-game-of-thrones-(books-1-5)/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/security-tools/?PHPSESSID=ikbe7phsr1g1lk3g9g8abie1g6',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/security-tools/?PHPSESSID=ikbe7phsr1g1lk3g9g8abie1g6',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:49:33-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /security-tools/?PHPSESSID=ikbe7phsr1g1lk3g9g8abie1g6 with /ebooks/(pdf)-a-game-of-thrones-(books-1-5)/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/security-tools/?PHPSESSID=ikbe7phsr1g1lk3g9g8abie1g6
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/index.php',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/index.php',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:49:58-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /index.php with /security-tools/?PHPSESSID=ikbe7phsr1g1lk3g9g8abie1g6
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/index.php
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/100/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/100/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:50:01-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/100/ with /index.php
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/100/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/search2/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/search2/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:50:09-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /search2/ with /found-it-on-the-webs/100/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/search2/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/code-hero/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/code-hero/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:50:17-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/code-hero/ with /search2/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/code-hero/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/anonymity/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/anonymity/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:50:29-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /anonymity/ with /found-it-on-the-webs/code-hero/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/anonymity/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/anonymity/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/anonymity/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:50:33-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /anonymity/ with /anonymity/
+## Factory: the last request was for the same page, request not valid for /anonymity/
+Time, a few seconds
+# Server: prop.valid: false, IP :/anonymity/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/mobile-hacking/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/mobile-hacking/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:50:37-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /mobile-hacking/ with /anonymity/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/mobile-hacking/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/hardware/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/hardware/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:50:45-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /hardware/ with /mobile-hacking/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/hardware/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/creative-arts/nyan-cat-ascii/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '98.231.101.127',
+  domain: 'http://evilzone.org',
+  urlRequest: '/creative-arts/nyan-cat-ascii/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:51:01-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /creative-arts/nyan-cat-ascii/ with /hardware/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/creative-arts/nyan-cat-ascii/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/mobile-hacking/ways-to-open-pattern-lock-on-samsung-galaxy-s5300/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/mobile-hacking/ways-to-open-pattern-lock-on-samsung-galaxy-s5300/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:51:21-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /mobile-hacking/ways-to-open-pattern-lock-on-samsung-galaxy-s5300/ with /creative-arts/nyan-cat-ascii/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/mobile-hacking/ways-to-open-pattern-lock-on-samsung-galaxy-s5300/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/mobile-hacking/cdma-to-gsm/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/mobile-hacking/cdma-to-gsm/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:51:25-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /mobile-hacking/cdma-to-gsm/ with /mobile-hacking/ways-to-open-pattern-lock-on-samsung-galaxy-s5300/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/mobile-hacking/cdma-to-gsm/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org//',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '49.244.126.4',
+  domain: 'http://evilzone.org',
+  urlRequest: '//',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:51:29-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : // with /mobile-hacking/cdma-to-gsm/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP ://
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/android/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/android/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:51:29-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /android/ with //
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/android/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/members-introduction/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '49.244.126.4',
+  domain: 'http://evilzone.org',
+  urlRequest: '/members-introduction/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:51:33-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /members-introduction/ with /android/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/members-introduction/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/125/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/125/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:51:46-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/125/ with /members-introduction/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/125/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/android/(apps)-fun-over-wifi/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/android/(apps)-fun-over-wifi/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:52:00-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /android/(apps)-fun-over-wifi/ with /found-it-on-the-webs/125/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/android/(apps)-fun-over-wifi/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/hardware/emotiv-epoc-vs-neurosky-mindset/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '203.96.145.152',
+  domain: 'http://evilzone.org',
+  urlRequest: '/hardware/emotiv-epoc-vs-neurosky-mindset/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:52:05-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /hardware/emotiv-epoc-vs-neurosky-mindset/ with /android/(apps)-fun-over-wifi/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/hardware/emotiv-epoc-vs-neurosky-mindset/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/search/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/search/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:52:11-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /search/ with /hardware/emotiv-epoc-vs-neurosky-mindset/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/search/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/index.php',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/index.php',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:52:12-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /index.php with /search/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/index.php
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.0; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.7,tl;q=0.3',
+  'accept-encoding': 'gzip, deflate',
+  dnt: '1',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/cisco-best-home-network-design/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '206.217.137.3',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/cisco-best-home-network-design/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.0; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:52:37-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/cisco-best-home-network-design/ with /index.php
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/cisco-best-home-network-design/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/ebooks/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/ebooks/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:52:49-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /ebooks/ with /found-it-on-the-webs/cisco-best-home-network-design/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/ebooks/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://www.evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://www.evilzone.org/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '117.203.137.117',
+  domain: 'http://www.evilzone.org',
+  urlRequest: '/',
+  userAgent: 'Mozilla/5.0 (Windows NT 5.1) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:52:50-04:00' }
+## Factory: request handling
+## Factory: init complete www-evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : / with /
+## Factory: the last request was for the same page, request not valid for /
+Time, 5 minutes
+# Server: prop.valid: false, IP :/
+## Backstore: insert
+## Backstore: init complete www-evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/ebooks/how-to-cheat-at-everything/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/ebooks/how-to-cheat-at-everything/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:52:55-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /ebooks/how-to-cheat-at-everything/ with /ebooks/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/ebooks/how-to-cheat-at-everything/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/android/any-benefits-of-using-cyanogenmod/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '69.165.142.50',
+  domain: 'http://evilzone.org',
+  urlRequest: '/android/any-benefits-of-using-cyanogenmod/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:53:16-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /android/any-benefits-of-using-cyanogenmod/ with /ebooks/how-to-cheat-at-everything/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/android/any-benefits-of-using-cyanogenmod/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/android/faceniff/msg12008/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '216.47.203.28',
+  domain: 'http://evilzone.org',
+  urlRequest: '/android/faceniff/msg12008/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:53:19-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /android/faceniff/msg12008/ with /android/any-benefits-of-using-cyanogenmod/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/android/faceniff/msg12008/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.0; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.7,tl;q=0.3',
+  'accept-encoding': 'gzip, deflate',
+  dnt: '1',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/found-it-on-the-webs/cisco-best-home-network-design/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '206.217.137.3',
+  domain: 'http://evilzone.org',
+  urlRequest: '/found-it-on-the-webs/cisco-best-home-network-design/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.0; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:53:32-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /found-it-on-the-webs/cisco-best-home-network-design/ with /android/faceniff/msg12008/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/found-it-on-the-webs/cisco-best-home-network-design/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/hardware/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/hardware/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:53:56-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /hardware/ with /found-it-on-the-webs/cisco-best-home-network-design/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/hardware/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/politics-religion/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/politics-religion/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:54:22-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /politics-religion/ with /hardware/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/politics-religion/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/index.php',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '108.23.116.84',
+  domain: 'http://evilzone.org',
+  urlRequest: '/index.php',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:54:39-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /index.php with /politics-religion/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/index.php
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/politics-religion/the-american-dream/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '92.6.166.169',
+  domain: 'http://evilzone.org',
+  urlRequest: '/politics-religion/the-american-dream/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20100101 Firefox/15.0.1',
+  OS: 'windows',
+  browser: 'firefox',
+  browserVer: '15.0.1',
+  timestamp: '2012-09-16T23:54:45-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /politics-religion/the-american-dream/ with /index.php
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/politics-religion/the-american-dream/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org//',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '70.232.54.198',
+  domain: 'http://evilzone.org',
+  urlRequest: '//',
+  userAgent: 'Mozilla/5.0 (X11; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0',
+  OS: 'linux',
+  browser: 'firefox',
+  browserVer: '15.0',
+  timestamp: '2012-09-16T23:55:02-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : // with /politics-religion/the-american-dream/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP ://
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  connection: 'keep-alive',
+  origin: 'http://evilzone.org',
+  'user-agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  accept: '*/*',
+  referer: 'http://evilzone.org/ebooks/(pdf)-a-game-of-thrones-(books-1-5)/',
+  'accept-encoding': 'gzip,deflate,sdch',
+  'accept-language': 'en-US,en;q=0.8',
+  'accept-charset': 'ISO-8859-1,utf-8;q=0.7,*;q=0.3' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '98.185.56.177',
+  domain: 'http://evilzone.org',
+  urlRequest: '/ebooks/(pdf)-a-game-of-thrones-(books-1-5)/',
+  userAgent: 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/21.0.1180.89 Safari/537.1',
+  OS: 'windows',
+  browser: 'chrome',
+  browserVer: '21.0.1180.89',
+  timestamp: '2012-09-16T23:55:20-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /ebooks/(pdf)-a-game-of-thrones-(books-1-5)/ with //
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/ebooks/(pdf)-a-game-of-thrones-(books-1-5)/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/tutorials/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '70.232.54.198',
+  domain: 'http://evilzone.org',
+  urlRequest: '/tutorials/',
+  userAgent: 'Mozilla/5.0 (X11; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0',
+  OS: 'linux',
+  browser: 'firefox',
+  browserVer: '15.0',
+  timestamp: '2012-09-16T23:55:24-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /tutorials/ with /ebooks/(pdf)-a-game-of-thrones-(books-1-5)/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/tutorials/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
+---------------------------------------
+# Server: request handling...
+{ host: 'kepler.step.polymtl.ca:8081',
+  'user-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0',
+  accept: '*/*',
+  'accept-language': 'en-us,en;q=0.5',
+  'accept-encoding': 'gzip, deflate',
+  connection: 'keep-alive',
+  referer: 'http://evilzone.org/tutorials/phishing-(for-beginners-and-a-revision-for-elite-hackers)/',
+  origin: 'http://evilzone.org' }
+{ name: 'RequestName',
+  valid: 'false',
+  clientIp: '70.232.54.198',
+  domain: 'http://evilzone.org',
+  urlRequest: '/tutorials/phishing-(for-beginners-and-a-revision-for-elite-hackers)/',
+  userAgent: 'Mozilla/5.0 (X11; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0',
+  OS: 'linux',
+  browser: 'firefox',
+  browserVer: '15.0',
+  timestamp: '2012-09-16T23:55:31-04:00' }
+## Factory: request handling
+## Factory: init complete evilzone-org, 27017
+# Server: end of handling...
+## FACTORY CHECK : /tutorials/phishing-(for-beginners-and-a-revision-for-elite-hackers)/ with /tutorials/
+## Factory: request is valid.
+Time, a few seconds
+# Server: prop.valid: true, IP :/tutorials/phishing-(for-beginners-and-a-revision-for-elite-hackers)/
+## Backstore: insert
+## Backstore: init complete evilzone-org, 27017
+# Server : Stored in backstore
+## Backstore: Data inserted in DB
