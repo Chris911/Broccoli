@@ -16,6 +16,9 @@ var server = http.createServer(function (request, response) {
     console.log('---------------------------------------');
     console.log('# Server: request handling...');
     
+    // - temp - loging for bug : #5
+    console.log(request.headers);
+
     var parsedUA = uaParser.parse(request.headers['user-agent']);
 
     var reqObj = {
