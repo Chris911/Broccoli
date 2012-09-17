@@ -16,7 +16,7 @@ De plus en plus je pense que si on fait ca GOOD Broccoli pourrait être beaucoup
 * Define strict logging level (info, notice, debug, severe)
 * Currently winston should log exception to a seperate log file. We should rething this and try to handle as many exceptions in the code it self. It is also a good practice to restart Node applications when an unhandled exception occur. 
 
-### Running server with email notification
+### Running the backend server with email notification
 To start the backend server with the email notification in case of exception, run (in /Broccoli/backend/script):
 
     ./start-server >& /dev/null &
