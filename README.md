@@ -40,6 +40,7 @@ Dependencies
 * [MongoDb-Module](http://www.mongodb.org/) - Database Storage
 * [Moment-Module] (http://momentjs.com/) - Formatting dates
 * [jQuery](http://jquery.org/) - Client-server communication
+* [express-useragent] (https://npmjs.org/package/express-useragent) - Useragent parser for Node.js
 
 ### Frontend (Dashboard)
 * [Express.js](http://expressjs.com/) - Node.js Web Framework
