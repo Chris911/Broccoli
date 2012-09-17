@@ -17,5 +17,5 @@ do
 		break
 	fi
 done
-rm log*
+rm log-*
 echo "DONE"
