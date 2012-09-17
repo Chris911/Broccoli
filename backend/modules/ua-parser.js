@@ -64,11 +64,7 @@ function parse(uaStr) {
     } else if (b.chrome) {
         b.version = /Chrome\/(\d+(\.\d+)*)/.exec(ua)[1];
     } else if (b.safari) {
-        if(/Version/.test(ua)) {
-            b.version = /Version\/(\d+(\.\d+)*)/.exec(ua)[1];
-        } else {
-            b.version = /Safari\/(\d+(\.\d+)*)/.exec(ua)[1];
-        }
+        b.version = /Version\/(\d+(\.\d+)*)/.exec(ua)[1];
     } else if (b.opera) {
         b.version = /Version\/(\d+(\.\d+)*)/.exec(ua)[1];
     } else {
