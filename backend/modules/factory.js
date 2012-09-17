@@ -2,6 +2,7 @@ var url = require('url');
 var Db = require('mongodb').Db;
 var Server = require('mongodb').Server;
 var assert = require('assert');
+var moment = require('moment');
 var db;
 
 var dbServerVar = {
@@ -23,6 +24,13 @@ var init = function(request, callback){
 
 var timeValidity = function (request, callback){
     db.open(function(err,db){
+        // - temp - Causes many failures, needs monitoring
+        if(err) {
+                //Handle error
+                console.log("Exception occured (factory.js/timeValidity): \n");
+                console.log("Request data: " + request + "\n")
+                return;
+        }
         db.collection('visits', function(err,collection){
             collection.find({"ip":request.ip}).sort([['_id', -1]]).nextObject(function(err, item) {
                 assert.equal(null, err);
@@ -33,7 +41,9 @@ var timeValidity = function (request, callback){
                     else {
                         console.log("## Factory: request is valid.");
                          request.valid = "true";
-                    }         
+                    } 
+                    now = moment.format();
+                    console.log("Time, %s", moment(item.timestamp).from(a).asSeconds());       
                 }
                 
                 db.close();

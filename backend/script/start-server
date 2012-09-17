@@ -1,0 +1,21 @@
+#!/bin/bash          
+#mutt has to be installed on the system
+
+node ../server.js > log.txt
+
+sleep 5
+
+while :
+do
+	DUMMY=`ps -ef | grep node | grep -v grep | wc -l`
+	if [ $DUMMY -gt 0 ]
+	then
+		sleep 5
+	else 
+		tail -n 25 log.txt >> log-excep-temp.txt
+		mutt -s “Server-Failure” -a ./log.txt -- albertson.d@gmail.com, christophe.naud.dulude@gmail.com < ./log-excep-temp.txt
+		break
+	fi
+done
+rm log*
+echo "DONE"
