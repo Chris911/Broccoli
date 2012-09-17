@@ -3,7 +3,7 @@ var url = require('url');
 var moment = require('moment');
 var factory = require('./modules/factory');
 var backstore = require('./modules/backstore');
-var uaParser = require('./modules/ua-parser');
+var uaParser = require('express-useragent');
 
 // Env variable declaration
 var serverVar = {
@@ -28,9 +28,10 @@ var server = http.createServer(function (request, response) {
         "domain":request.headers.origin,
         "urlRequest":url.parse(request.url).query,
         "userAgent":request.headers['user-agent'],
-        "OS":parsedUA.platform.name,
-        "browser":parsedUA.browser.name,
-        "browserVer":parsedUA.browser.version,
+        "OS":parsedUA.OS,
+        "browser":parsedUA.Browser,
+        "browserVer":parsedUA.Version,
+        "isMobile":parsedUA.isMobile,
         "timestamp":moment().format()
     };
     console.log(reqObj);
