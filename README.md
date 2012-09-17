@@ -33,7 +33,8 @@ Dependencies
 
 ### Backend (Server)
 * [Node.js](http://nodejs.org/) - Application Server
-* [MongoDb](http://www.mongodb.org/) - Database Storage
+* [MongoDb-Module](http://www.mongodb.org/) - Database Storage
+* [Moment-Module] (http://momentjs.com/) - Formatting dates
 * [jQuery](http://jquery.org/) - Client-server communication
 
 ### Frontend (Dashboard)
