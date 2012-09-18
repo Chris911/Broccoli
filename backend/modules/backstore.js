@@ -9,12 +9,12 @@ var dbServerVar = {
 };
 
 var init = function(request, callback){
-    domainParsing = url.parse(request.domain); 
-    domainFormatted = domainParsing.hostname.replace(/\./g,'-');
+    domainParsing = request.domain; 
+    domainFormatted = domainParsing.replace(/\./g,'-');
     domainFormatted = domainFormatted.replace(/\//g,'-');
     dbServerVar.name = domainFormatted;
-    
-    db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {}), {});
+
+    db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {auto_reconnect: true, poolSize: 2}), {});
     
     console.log("## Backstore: init complete %s, %d", dbServerVar.name, dbServerVar.port);
     callback(request);
@@ -27,11 +27,12 @@ var insert = function(request,callback){
             if(err) {
                 //Handle error
                 console.log("Exception occured (Backstore.js/insert): \n");
-                console.log("Request data: " + request + "\n")
-                return;
+                console.log("Mongo err : " + err);
+                callback(request);
             }
             collection.insert(request, function(){
                 console.log("## Backstore: Data inserted in DB");
+                db.close();
             });
         });
     });

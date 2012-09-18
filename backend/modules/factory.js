@@ -11,12 +11,12 @@ var dbServerVar = {
 };
 
 var init = function(request, callback){
-    domainParsing = url.parse(request.domain); 
-    domainFormatted = domainParsing.hostname.replace(/\./g,'-');
+    domainParsing = request.domain; 
+    domainFormatted = domainParsing.replace(/\./g,'-');
     domainFormatted = domainFormatted.replace(/\//g,'-');
     dbServerVar.name = domainFormatted;
     
-    db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {}), {});
+    db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {auto_reconnect: true, poolSize: 2}), {});
     
     console.log("## Factory: init complete %s, %d", dbServerVar.name, dbServerVar.port);
     callback(request);
@@ -28,24 +28,22 @@ var timeValidity = function (request, callback){
         if(err) {
                 //Handle error
                 console.log("Exception occured (factory.js/timeValidity): \n");
-                console.log("Request data: " + request + "\n")
-                return;
+                console.log("Mongo err : " + err);
+                callback(request);
         }
         db.collection('visits', function(err,collection){
             collection.find({"ip":request.ip}).sort([['_id', -1]]).nextObject(function(err, item) {
-                assert.equal(null, err);
                 if(item != null){
                     console.log("## FACTORY CHECK : %s with %s", request.urlRequest, item.urlRequest);
                     if(item.urlRequest == request.urlRequest)
                         console.log("## Factory: the last request was for the same page, request not valid for %s", request.urlRequest);
                     else {
                         console.log("## Factory: request is valid.");
-                         request.valid = "true";
+                        request.valid = "true";
                     } 
                     //now = moment.format();
                     //console.log("Time, %s", moment(item.timestamp).from(a).asSeconds());       
-                }
-                
+                }                
                 db.close();
                 callback(request);
             });
