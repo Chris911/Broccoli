@@ -14,7 +14,9 @@ var logger = new (winston.Logger)({
       		filename: loggerVar.logDir + loggerVar.logPrefix + '.log',
       		json: false,
       		prettyPrint: true,
-      		colorize: true,
+      		// Colorize is nice when reading log in the console but not in text editor..
+      		// Removing for now but might nice to have it (somehow)
+      		colorize: false,
       		timestamp: false,
       		handleExceptions: true
       	})
