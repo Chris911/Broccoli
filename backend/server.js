@@ -1,9 +1,11 @@
 var http = require('http');
 var url = require('url');
 var moment = require('moment');
+var crypto = require('crypto');
 var factory = require('./modules/factory');
 var backstore = require('./modules/backstore');
 var uaParser = require('express-useragent');
+var logger = require('./modules/logger');
 
 // Env variable declaration
 var serverVar = {
@@ -14,11 +16,8 @@ var serverVar = {
 
 // Webserver & Callback
 var server = http.createServer(function (request, response) {
-    console.log('---------------------------------------');
-    console.log('# Server: request handling...');
-    
-    // - temp - loging for bug : #5
-    console.log(request.headers);
+    // This hash is used to follow the request on the server
+    var requestHash = crypto.createHash('md5').update(JSON.stringify(request.headers)).digest("hex");
 
     // Needed otherwise url.parse in reqObj will cause exception if undefined
     if (typeof request.headers.origin == 'undefined') {
@@ -28,7 +27,7 @@ var server = http.createServer(function (request, response) {
     var parsedUA = uaParser.parse(request.headers['user-agent']);
 
     var reqObj = {
-        "name":"RequestName",
+        "hash":requestHash,
         "valid":"false",
         "clientIp":request.connection.remoteAddress,
         "domain":url.parse(request.headers.origin).hostname,
@@ -40,16 +39,13 @@ var server = http.createServer(function (request, response) {
         "isMobile":parsedUA.isMobile,
         "timestamp":moment().format()
     };
-    console.log(reqObj);
+    
+    logger.logRequest('info', "Event: New Request (" + requestHash + ")", reqObj);
 
-
-    if(typeof reqObj.domain != 'undefined'){
+    if(typeof reqObj.domain != 'undefined') {
         // If the domain of the request is empty, no visit will be logged (unknown site)
-        factory.checkValidity(reqObj, function(request){
-            console.log("# Server: prop.valid: " + reqObj.valid + ", IP :" + reqObj.urlRequest);
-            backstore.insert(request, function(){
-                console.log("# Server : Stored in backstore");
-            });
+        factory.checkValidity(reqObj, function(request) {
+            backstore.insert(request);
         });
     }
       
@@ -58,9 +54,7 @@ var server = http.createServer(function (request, response) {
 		"Access-Control-Allow-Origin": "*"
 	});
     response.end("Broccoli pre-alpha, " + serverVar.port);
-    
-    console.log('# Server: end of handling...');
+
 }).listen(serverVar.port);
 
-//console.log("# Server running %s:%d", serverVar.name, serverVar.port);
 logger.log('info', "Server running on " + serverVar.name + ":" + serverVar.port);

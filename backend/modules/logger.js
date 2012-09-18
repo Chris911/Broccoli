@@ -3,7 +3,7 @@ var moment  = require('moment');
 
 //Again this should be in a config file
 var loggerVar = {
-    "logDir":"/var/log/Broccoli/",
+    "logDir":"/var/log/broccoli/",
     "logPrefix":"broccoli"
 }
 
@@ -23,13 +23,15 @@ var logger = new (winston.Logger)({
     ]
   });
 
+// Log a message
 exports.log = function(level, message) {
 	logger.log(level, getTimestamp() + message + "\n");
 }
 
+// Used to log message including a JSON request object
 exports.logRequest = function(level, message, request) {
 	logger.log(level,
-		getTimestamp() + message + "\n\tRequest:\n\t" + request + "\n");
+		getTimestamp() + message + "\n\tRequest:\n" + JSON.stringify(request, null, 8) + "\n");
 }
 
 var getTimestamp = function() {
