@@ -15,7 +15,7 @@ var init = function(request, callback) {
     domainFormatted = request.domain.replace(/\./g,'-');
     dbServerVar.name = domainFormatted;
     
-    db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {}), {});
+    db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {auto_reconnect: true, poolSize: 2}), {});
     
     callback(request);
 };
@@ -37,14 +37,15 @@ var timeValidity = function (request, callback){
                         logger.log('info', "Time Validity Fail: Request " + request.hash + " for page " + request.urlRequest + " invalid.");
                     else {
                         logger.log('info', "Time Validity Pass for Request " + request.hash);
-                        request.valid = "true";
+                        request.valid = true;
                     } 
                     //now = moment.format();
                     //console.log("Time, %s", moment(item.timestamp).from(a).asSeconds());       
                 }
                 
-                db.close();
-                callback(request);
+                db.close(true, function(err,db){
+                     callback(request);
+                });
             });
         });
     });

@@ -12,8 +12,8 @@ do
 	then
 		sleep 5
 	else 
-		tail -n 25 log.txt >> log-excep-temp.txt
-		mutt -s “Server-Failure” -a ./log.txt -- albertson.d@gmail.com, christophe.naud.dulude@gmail.com < ./log-excep-temp.txt
+		#tail -n 25 log.txt >> log-excep-temp.txt
+		mutt -s “Server-Failure” -a /var/log/broccoli/broccoli.log -- albertson.d@gmail.com, christophe.naud.dulude@gmail.com < ./log-excep-temp.txt
 		break
 	fi
 done

@@ -13,7 +13,7 @@ var init = function(request, callback){
     domainFormatted = request.domain.replace(/\./g,'-');
     dbServerVar.name = domainFormatted;
     
-    db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {}), {});
+    db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {auto_reconnect: true, poolSize: 2}), {});
     
     callback(request);
 };
@@ -30,6 +30,9 @@ var insert = function(request){
             }
             collection.insert(request, function() {
                 logger.log('info', "Event: Successfully added request " + request.hash + " to database.")
+                db.close(true, function(err,db){
+                
+                });
             });
         });
     });
