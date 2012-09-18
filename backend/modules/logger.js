@@ -1,16 +1,35 @@
 var winston = require('winston');
+var moment  = require('moment');
 
 //Again this should be in a config file
 var loggerVar = {
-    "logDir":"/var/log/Broccoli/"
-    "logPrefix":""
+    "logDir":"/var/log/Broccoli/",
+    "logPrefix":"broccoli"
 }
 
-winston.add(winston.transports.File, {
-    filename: loggerVar.logDir + loggerVar.logPrefix + '.log',
+var logger = new (winston.Logger)({
+    transports: [
+      new (winston.transports.File)(
+      	{ 
+      		filename: loggerVar.logDir + loggerVar.logPrefix + '.log',
+      		json: false,
+      		prettyPrint: true,
+      		colorize: true,
+      		timestamp: false,
+      		handleExceptions: true
+      	})
+    ]
   });
 
-winston.add(winston.transports.File, {
-    filename: loggerVar.logDir + loggerVar.logPrefix + "-Exceptions" + '.log',
-    handleExceptions: true
-});
+exports.log = function(level, message) {
+	logger.log(level, getTimestamp() + message + "\n");
+}
+
+exports.logRequest = function(level, message, request) {
+	logger.log(level,
+		getTimestamp() + message + "\n\tRequest:\n\t" + request + "\n");
+}
+
+var getTimestamp = function() {
+	return "[" + moment().format("YYYY.MM.DD-HH:mm:ss:SSS") + "] ";
+}

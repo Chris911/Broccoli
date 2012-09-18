@@ -4,11 +4,12 @@ var moment = require('moment');
 var factory = require('./modules/factory');
 var backstore = require('./modules/backstore');
 var uaParser = require('express-useragent');
+var logger = require('./modules/logger');
 
 // Env variable declaration
 var serverVar = {
     "name":"broccoli-server",
-    "port":"8081"
+    "port":"8082"
 }
 
 // Webserver & Callback
@@ -55,4 +56,5 @@ var server = http.createServer(function (request, response) {
     console.log('# Server: end of handling...');
 }).listen(serverVar.port);
 
-console.log("# Server running %s:%d", serverVar.name, serverVar.port);
+//console.log("# Server running %s:%d", serverVar.name, serverVar.port);
+logger.log('info', "Server running on " + serverVar.name + ":" + serverVar.port);
