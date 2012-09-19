@@ -28,7 +28,7 @@ var server = http.createServer(function (request, response) {
 
     var reqObj = {
         "hash":requestHash,
-        "valid":"false",
+        "valid":false,
         "clientIp":request.connection.remoteAddress,
         "domain":url.parse(request.headers.origin).hostname,
         "urlRequest":url.parse(request.url).query,
