@@ -29,7 +29,7 @@ var timeValidity = function (request, callback){
                 return;
         }
         db.collection('visits', function(err,collection){
-            collection.find({"clientIp":request.ip}).sort([['_id', -1]]).nextObject(function(err, item) {
+            collection.find({"clientIp":request.clientIp}).sort([['_id', -1]]).nextObject(function(err, item) {
                 assert.equal(null, err);
                 if(item != null){
                     //console.log("## FACTORY CHECK : %s with %s", request.urlRequest, item.urlRequest);
