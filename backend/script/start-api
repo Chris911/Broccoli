@@ -1,0 +1,20 @@
+#!/bin/bash          
+#mutt has to be installed on the system
+
+node ../api.js
+
+sleep 5
+
+while :
+do
+	DUMMY=`ps -ef | grep api.js | grep -v grep | wc -l`
+	if [ $DUMMY -gt 0 ]
+	then
+		sleep 5
+	else 
+		mutt -s "API-Server-Failure" -a /var/log/broccoli/broccoli*.log -- albertson.d@gmail.com, christophe.naud.dulude@gmail.com < ./message-body.txt
+		break
+	fi
+done
+echo "DONE"
+

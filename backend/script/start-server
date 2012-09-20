@@ -7,7 +7,7 @@ sleep 5
 
 while :
 do
-	DUMMY=`ps -ef | grep node | grep -v grep | wc -l`
+	DUMMY=`ps -ef | grep server.js | grep -v grep | wc -l`
 	if [ $DUMMY -gt 0 ]
 	then
 		sleep 5
