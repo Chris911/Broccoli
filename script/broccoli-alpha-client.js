@@ -43,7 +43,7 @@ var server = {
 loadjQuery("https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js", function ajax(){
 	$(window).load(function() {
 		$.ajax({
-	        url: 'http://kepler.step.polymtl.ca:8081/other',
+	        url: 'http://kepler.step.polymtl.ca:8081',
 	        type: 'GET',
 	        data: $pathname + $param`
 	    });
