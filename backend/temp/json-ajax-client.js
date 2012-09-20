@@ -35,10 +35,6 @@ function loadjQuery(url, callback) {
 // - Be up-to-date with latest version from Google :
 // - https://developers.google.com/speed/libraries/devguide#jquery
 loadjQuery("https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js", function ajax(){
-	var temp = {
-		"val1":"valeur1",
-		"val2":"valeur2"
-	}
 	$(window).load(function() {
 		$.ajax({
 	        url: 'http://kepler.step.polymtl.ca:8081/other',
@@ -53,17 +49,6 @@ loadjQuery("https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js", f
 		    dataType: 'json',
 		    contentType: "application/json",
 		});
-		$.ajax({
-            url: 'http://kepler.step.polymtl.ca:8082',
-            type: 'GET',
-            data: JSON.stringify({"temp":"test","as":"asd"})
-		});
-		$.ajax({
-            url: 'http://kepler.step.polymtl.ca:8083',
-            type: 'GET',
-            data: $pathname + $param
-        });
-
 	});
 });
 

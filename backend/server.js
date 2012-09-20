@@ -2,17 +2,22 @@ var http = require('http');
 var url = require('url');
 var moment = require('moment');
 var crypto = require('crypto');
+var uaParser = require('express-useragent');
 var factory = require('./modules/factory');
 var backstore = require('./modules/backstore');
-var uaParser = require('express-useragent');
 var logger = require('./modules/logger');
 
 // Env variable declaration
 var serverVar = {
     "name":"broccoli-server",
-    "port":"8081",
+    "port":8081,
     "version":"0.0.01a"
 }
+
+// Will need to be implemented for _DEBUG flag
+// process.argv.forEach(function (val, index, array) {
+//   console.log(index + ': ' + val);
+// });
 
 // Webserver & Callback
 var server = http.createServer(function (request, response) {
@@ -52,7 +57,7 @@ var server = http.createServer(function (request, response) {
     response.writeHead(200, {
         "Content-Type": "text/plain",
 		"Access-Control-Allow-Origin": "*"
-	});
+	});    
     response.end("Broccoli pre-alpha, " + serverVar.port);
 
 }).listen(serverVar.port);

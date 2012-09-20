@@ -20,8 +20,7 @@ function loadjQuery(url, callback) {
 	                script.onload = function () {
 	                	callback();
 	                };
-	        }
-	
+	        }	
 	        script.src = url;
 	        document.getElementsByTagName("head")[0].appendChild(script);
 	} else {
@@ -30,15 +29,36 @@ function loadjQuery(url, callback) {
 	}
 }
 
+server = {
+
+
+}
+
+var server = {
+
+}
 // Load the script if needed, make jquery ajax request using callback
 // - Be up-to-date with latest version from Google :
 // - https://developers.google.com/speed/libraries/devguide#jquery
 loadjQuery("https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js", function ajax(){
 	$(window).load(function() {
 		$.ajax({
-			url: 'http://kepler.step.polymtl.ca:8081',
-			type: 'GET',
-			data: $pathname + $param
+	        url: 'http://kepler.step.polymtl.ca:8081/other',
+	        type: 'GET',
+	        data: $pathname + $param`
+	    });
+		$.ajax({
+	        url: 'http://kepler.step.polymtl.ca:8082/other',
+	        type: 'GET',
+	        data: $pathname + $param
+	    });
+	    $.ajax({
+	        type: 'POST',
+		    url: 'http://kepler.step.polymtl.ca:8089',
+		    data: JSON.stringify({"temp":"test","as":"asd"}),
+		    crossDomain: true,
+		    dataType: 'json',
+		    contentType: "application/json",
 		});
 	});
 });

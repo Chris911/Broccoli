@@ -13,8 +13,7 @@ var dbServerVar = {
 
 var init = function(request, callback) {
     domainFormatted = request.domain.replace(/\./g,'-');
-    dbServerVar.name = domainFormatted;
-    
+    dbServerVar.name = domainFormatted;    
     db = new Db(dbServerVar.name, new Server('localhost', dbServerVar.port, {auto_reconnect: true, poolSize: 2}), {});
     
     callback(request);
@@ -22,17 +21,14 @@ var init = function(request, callback) {
 
 var timeValidity = function (request, callback){
     db.open(function(err,db){
-        // - temp - Causes many failures, needs monitoring
         if(err) {
-                //Handle error
-                logger.logRequest('error', "Error checking time validity for request " + request.hash, request);
+                logger.logRequest('error', "Error checking time validity for request (see Mongo logs, avail. connections?) " + request.hash, request);
                 return;
         }
         db.collection('visits', function(err,collection){
             collection.find({"clientIp":request.clientIp}).sort([['_id', -1]]).nextObject(function(err, item) {
                 assert.equal(null, err);
                 if(item != null){
-                    //console.log("## FACTORY CHECK : %s with %s", request.urlRequest, item.urlRequest);
                     if(item.urlRequest == request.urlRequest)
                         logger.log('info', "Time Validity Fail: Request " + request.hash + " for page " + request.urlRequest + " invalid.");
                     else {
@@ -52,7 +48,6 @@ var timeValidity = function (request, callback){
 };
 
 exports.checkValidity = function (request, callback){
-    // After init, call validity checks
     init(request, function(request){
             timeValidity(request, function(request){
             callback(request);
