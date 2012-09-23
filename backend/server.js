@@ -6,6 +6,7 @@ var uaParser = require('express-useragent');
 var factory = require('./modules/factory');
 var backstore = require('./modules/backstore');
 var logger = require('./modules/logger');
+var security = require('./modules/security');
 
 // Env variable declaration
 var serverVar = {
@@ -49,9 +50,13 @@ var server = http.createServer(function (request, response) {
 
     if(typeof reqObj.domain != 'undefined') {
         // If the domain of the request is empty, no visit will be logged (unknown site)
-        factory.checkValidity(reqObj, function(request) {
-            backstore.insert(request);
-        });
+        //security.idCheck(reqObj, function(reqObj, idCheck){
+            //if(idCheck){
+                factory.checkValidity(reqObj, function(request) {
+                    backstore.insert(request);
+                //});
+            //}
+        })
     }
       
     response.writeHead(200, {

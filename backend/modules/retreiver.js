@@ -47,6 +47,7 @@ exports.visits = function (domain, callback){
 
     init(jsonObj, function(jsonObj){
             visitsCount(jsonObj, function(jsonObj){
+            db.close();
             callback(jsonObj);
         });
     });

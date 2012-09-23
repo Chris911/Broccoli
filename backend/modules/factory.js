@@ -50,7 +50,7 @@ var timeValidity = function (request, callback){
 exports.checkValidity = function (request, callback){
     init(request, function(request){
             timeValidity(request, function(request){
-            callback(request);
+                callback(request);
         });
     });
 };
