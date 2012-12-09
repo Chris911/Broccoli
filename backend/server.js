@@ -15,11 +15,6 @@ var serverVar = {
     "version":"0.0.01a"
 }
 
-// Will need to be implemented for _DEBUG flag
-// process.argv.forEach(function (val, index, array) {
-//   console.log(index + ': ' + val);
-// });
-
 // Webserver & Callback
 var server = http.createServer(function (request, response) {
     // This hash is used to follow the request on the server
@@ -49,13 +44,8 @@ var server = http.createServer(function (request, response) {
     logger.logRequest('info', "Event: New Request (" + requestHash + ")", reqObj);
 
     if(typeof reqObj.domain != 'undefined') {
-        // If the domain of the request is empty, no visit will be logged (unknown site)
-        //security.idCheck(reqObj, function(reqObj, idCheck){
-            //if(idCheck){
-                factory.checkValidity(reqObj, function(request) {
-                    backstore.insert(request);
-                //});
-            //}
+        factory.checkValidity(reqObj, function(request) {
+            backstore.insert(request);
         })
     }
       
