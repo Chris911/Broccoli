@@ -1,6 +1,5 @@
 Broccoli
 ========
-
 Web Analytics for Humans
 
 This is a weekend project to familiarize ourselves to NodeJS, web analytics and NoSQL technologies.
