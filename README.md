@@ -3,13 +3,13 @@ Broccoli
 
 Web Analytics for Humans
 
+This is a weekend project to familiarize ourselves to NodeJS, web analytics and NoSQL technologies.
+
 To-Do / Notes
 -------------
 ### Reminder
 Think **modularity** and **reuseability**. We do not want to duplicate code and want this whole project to be **scalable**. 
 Look for libraries and read on **NodeJS programming standards, practices and architectures**. 
-
-De plus en plus je pense que si on fait ca GOOD Broccoli pourrait être beaucoup plus qu'une ligne dans notre CV. THINK BIG! 
 
 ### Logging System
 * Use Winston
@@ -25,10 +25,10 @@ same for the API-server
 
     ./start-api >& /dev/null &
 
-Tutorials
+Developers
 ---------
-Note: Only post links to tutorial you read and used or thinkg we should use. No spam! 
-
+[Christophe Naud-Dulude](https://github.com/Chris911)
+[David Albertson](https://github.com/Diastro)
 
 
 Dependencies
