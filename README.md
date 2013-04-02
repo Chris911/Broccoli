@@ -28,6 +28,7 @@ same for the API-server
 Developers
 ---------
 [Christophe Naud-Dulude](https://github.com/Chris911)
+
 [David Albertson](https://github.com/Diastro)
 
 
